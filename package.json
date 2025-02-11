@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "emitron",
+  "packageManager": "pnpm@10.2.1",
+  "version": "1.0.0",
+  "description": "A modern, type-safe event emitter for Node.js and browsers. Built with pure ESM and the latest Node.js features. Inspired by EventEmitter3, Emittery, and Mitt, but designed for the modern TypeScript ecosystem.",
+  "readme": "README.md",
+  "license": "MIT",
+  "type": "module",
+  "files": ["dist", "README.md", "LICENSE"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "events",
+    "emitter",
+    "event-emitter",
+    "typescript",
+    "type-safe",
+    "async",
+    "pub-sub",
+    "observable",
+    "reactive",
+    "lightweight"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtsuLeVrai/emitron"
+  },
+  "bugs": {
+    "url": "https://github.com/AtsuLeVrai/emitron/issues"
+  },
+  "author": {
+    "name": "AtsuLeVrai",
+    "url": "https://github.com/AtsuLeVrai"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=development node build.js",
+    "build:prod": "cross-env NODE_ENV=production node build.js",
+    "format": "biome format --write .",
+    "lint": "biome lint --write --unsafe .",
+    "check": "biome check --write --unsafe .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:bench": "vitest bench",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.1",
+    "@vitest/coverage-v8": "3.0.5",
+    "cross-env": "^7.0.3",
+    "husky": "^9.1.7",
+    "rollup": "^4.34.6",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-swc3": "^0.12.1",
+    "typescript": "^5.7.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.5"
+  }
+}

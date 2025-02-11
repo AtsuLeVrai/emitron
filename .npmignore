@@ -1,0 +1,48 @@
+# Source
+src/
+tests/
+benchmark/
+
+# Config files
+.github/
+.husky/
+.vscode/
+.idea/
+.editorconfig
+.eslintrc*
+.prettierrc*
+.commitlintrc*
+.lintstagedrc*
+tsconfig.json
+vitest.config.*
+rollup.config.*
+*.config.js
+*.config.ts
+
+# Build tools
+build.js
+build.ts
+
+# Git
+.git/
+.gitignore
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env*
+
+# IDE
+*.sw?
+
+# macOS
+.DS_Store
