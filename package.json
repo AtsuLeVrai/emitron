@@ -18,9 +18,6 @@
     "typescript",
     "type-safe",
     "async",
-    "pub-sub",
-    "observable",
-    "reactive",
     "lightweight"
   ],
   "exports": {
